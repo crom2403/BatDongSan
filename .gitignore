@@ -1,0 +1,7 @@
+# Bỏ qua thư mục node_modules trong cả client và server
+/client/node_modules
+/server/node_modules
+
+# Bỏ qua file .env trong cả client và server
+/client/.env
+/server/.env
