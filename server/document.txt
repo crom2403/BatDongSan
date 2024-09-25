@@ -1,0 +1,14 @@
+#7
+các thư viện cần thiết
+yarn add express cors
+
+
+tải và cấu hình sequelize https://sequelize.org/docs/v6/getting-started/
+npm install --save sequelize || yarn add sequelize
+dùng  Postgre  thì  npm install --save pg pg-hstore
+dùng Mysql thì npm install --save mysql2
+
+// 36:54 tận dụng file .env , xóa folder config đc generate ra , tạo file .sequelizerc để cấu hình lại config
+lệnh tạo table trong sequelize migration 
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+npx sequelize-cli db:migrate

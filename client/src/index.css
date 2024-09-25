@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+html {
+  font-family: "Questrial", sans-serif;
+}
+
+/* 
+text-shadow: (dương lệch phải, âm lệch trái) (dương lệch lên trên , âm lệch xuống dưới) (đối số thứ 3 là độ nhòe) (màu sắc)
+*/
+.text-shadow {
+  text-shadow: 1px 1px 0px black, -1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black;
+}

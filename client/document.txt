@@ -1,0 +1,23 @@
+yarn thì yarn add , yarn.lock
+npm thì npm install , packagelock.json
+
+
+#3
+Config shadcn/ui ở đây dùng js nên tạo file jsconfig.json
+thư viện twMerge nếu 2 className trong tailwind giống nhau thì class thêm vào sau có thể ghi đè
+thư viện clsx dùng để chuyển các agrument truyền vào thành chuỗi string
+
+2 thư viện này tạo thành func cn dùng để gộp các className
+ vd: const a = "text-xl"; const b = "text-red-500"
+  cách dùng cn(a, b)
+
+#4 add những lib cần thiết
+yarn add react-router-dom axios react-hook-form
+
+#5 
+add ggfont 42:19 dùng font Questrial
+
+#6 login dùng thư viện react-oauth/google
+
+#7 3:24 vào google cloud console tạo new project
+ -> lấy đc accesstoken nhưng ko phải dạng JWT
