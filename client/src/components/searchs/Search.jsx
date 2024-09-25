@@ -1,28 +1,57 @@
 import { TabsContent } from "@radix-ui/react-tabs"
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs"
 import { useState } from "react"
+import { Search as SearchIcon } from "lucide-react"
+import { Button } from "../ui/button"
+import SelectProvince from "./SelectProvince"
+import { cn } from "@/lib/utils"
 
 const Search = () => {
   const postTypes = ["Cho thuê", "Bán"].map((el, idx) => ({ id: idx, label: el, value: el }))
   const [activeTab, setActiveTab] = useState(postTypes[0].value)
+  const [isShowSelectProvince, setIsShowSelectProvince] = useState(false)
   return (
     <div className=" text-slate-50 absolute top-0 bottom-0 left-10 right-10 flex items-center justify-center">
       <div className="w-[945px] max-w-full">
-        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value)}>
-          <TabsList>
+        <Tabs
+          className="space-y-0 "
+          value={activeTab}
+          onValueChange={(value) => setActiveTab(value)}
+        >
+          <TabsList className="rounded-b-none bg-transparent p-0 gap-1">
             {postTypes.map((el) => (
-              <TabsTrigger value={el.value} key={el.id}>
+              <TabsTrigger
+                className="data-[state=active]:bg-black/60 data-[state=active]:text-slate-50 bg-slate-50
+                 text-slate-950 h-full min-w-[81px] rounded-md rounded-b-none"
+                value={el.value}
+                key={el.id}
+              >
                 {el.label}
               </TabsTrigger>
             ))}
           </TabsList>
           {postTypes.map((el) => (
             <TabsContent
-              className="bg-black/60 rounded-md space-y-4 text-sm"
+              className="bg-black/60 h-40 rounded-md rounded-tl-none p-4 space-y-4 text-sm"
               value={el.value}
               key={el.id}
             >
-              {el.label}
+              <div
+                className={cn(
+                  "relative flex items-center justify-between bg-slate-50 rounded-md px-[6px] py-2",
+                  isShowSelectProvince && "rounded-b-none"
+                )}
+                onClick={() => setIsShowSelectProvince(true)}
+              >
+                <p className="text-sm flex items-center gap-2 font-semibold text-slate-900">
+                  <SearchIcon size={20} color="#222222" />
+                  <span>Trên toàn quốc</span>
+                </p>
+                <Button>Tìm kiếm</Button>
+                {isShowSelectProvince && (
+                  <SelectProvince onClose={() => setIsShowSelectProvince(false)} />
+                )}
+              </div>
             </TabsContent>
           ))}
         </Tabs>
