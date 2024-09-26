@@ -36,3 +36,36 @@ export const banners = [
   "/jpg/banner-3.jpg",
   "/jpg/banner-4.jpg",
 ].map((el, idx) => ({ id: idx, imageUrl: el }))
+
+export const provinceTops = [
+  {
+    id: 1,
+    imageUrl: "/jpg/hanoi.jpg",
+    label: "Hà Nội",
+  },
+  {
+    id: 2,
+    imageUrl: "/jpg/hcm.jpg",
+    label: "Hồ Chí Minh",
+  },
+  {
+    id: 3,
+    imageUrl: "/jpg/danang.jpg",
+    label: "Đà Nẵng",
+  },
+  {
+    id: 4,
+    imageUrl: "/jpg/binhduong.jpg",
+    label: "Bình Dương",
+  },
+  {
+    id: 5,
+    imageUrl: "/jpg/dongnai.jpg",
+    label: "Đồng Nai",
+  },
+  {
+    id: 6,
+    imageUrl: "/jpg/nhatrang.jpg",
+    label: "Nha Trang",
+  },
+]
