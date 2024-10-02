@@ -6,6 +6,7 @@ import { Button } from "../ui/button"
 import SelectProvince from "./SelectProvince"
 import { cn } from "@/lib/utils"
 import { PopoverRange } from "./"
+import { prices, sizes } from "@/lib/constants"
 
 const Search = () => {
   const postTypes = ["Cho thuê", "Bán"].map((el, idx) => ({ id: idx, label: el, value: el }))
@@ -54,8 +55,8 @@ const Search = () => {
                 )}
               </div>
               <div className="grid grid-cols-3 gap-4">
-                <PopoverRange />
-                <PopoverRange />
+                <PopoverRange name="price" _name="_price" options={prices} label="Mức giá" />
+                <PopoverRange name="price" _name="_price" options={sizes} label="Diện tích" />
                 <div>Property</div>
               </div>
             </TabsContent>
