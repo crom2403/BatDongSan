@@ -12,7 +12,7 @@ import { useState, useEffect, useRef } from "react"
 const PopoverRange = ({ name, label, options = [], _name }) => {
   const form = useForm({
     defaultValues: {
-      price: [0, 100],
+      [name]: [0, 100],
     },
   })
 

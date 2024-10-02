@@ -5,8 +5,8 @@ import { Search as SearchIcon } from "lucide-react"
 import { Button } from "../ui/button"
 import SelectProvince from "./SelectProvince"
 import { cn } from "@/lib/utils"
-import { PopoverRange } from "./"
-import { prices, sizes } from "@/lib/constants"
+import { PopoverRange, PopoverCheckbox } from "./"
+import { postRentTypes, postSoldTypes, prices, sizes } from "@/lib/constants"
 
 const Search = () => {
   const postTypes = ["Cho thuê", "Bán"].map((el, idx) => ({ id: idx, label: el, value: el }))
@@ -57,6 +57,15 @@ const Search = () => {
               <div className="grid grid-cols-3 gap-4">
                 <PopoverRange name="price" _name="_price" options={prices} label="Mức giá" />
                 <PopoverRange name="price" _name="_price" options={sizes} label="Diện tích" />
+                <PopoverCheckbox
+                  label="Loại tin đăng"
+                  options={
+                    activeTab === "Bán"
+                      ? postSoldTypes.map((el) => ({ id: el.pathname, label: el.name }))
+                      : postRentTypes.map((el) => ({ id: el.pathname, label: el.name }))
+                  }
+                  name="postType"
+                />
                 <div>Property</div>
               </div>
             </TabsContent>

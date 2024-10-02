@@ -1,4 +1,4 @@
-import { postRentTypes, postSolidTypes } from "@/lib/constants"
+import { postRentTypes, postSoldTypes } from "@/lib/constants"
 import { pathnames } from "@/lib/pathname"
 
 const navigations = [
@@ -7,7 +7,7 @@ const navigations = [
     name: "Nhà đất bán",
     pathnames: pathnames.publics.soldProperty,
     hasSub: true,
-    subs: postSolidTypes,
+    subs: postSoldTypes,
   },
   {
     id: 2,

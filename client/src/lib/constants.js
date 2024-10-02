@@ -1,6 +1,6 @@
 import slugify from "slugify"
 
-export const postSolidTypes = [
+export const postSoldTypes = [
   "Căn hộ chung cư",
   "Nhà mặt phố",
   "Nhà riêng",
