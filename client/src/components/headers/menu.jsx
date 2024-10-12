@@ -7,14 +7,14 @@ const menu = [
     label: "Tổng quan",
     path: pathnames.users.layout + pathnames.users.general,
     icon: <ChartPie size={14} />,
-    hasSubs: false,
+    hasSub: false,
   },
   {
     id: 2,
     label: "Cá nhân",
     path: pathnames.users.layout + pathnames.users.personal,
     icon: <UserRound size={14} />,
-    hasSubs: true,
+    hasSub: true,
     subs: [
       {
         id: 21,
@@ -38,7 +38,7 @@ const menu = [
     label: "Quản lý tin đăng",
     icon: <List size={14} />,
     path: pathnames.users.layout + pathnames.users.managePost,
-    hasSubs: true,
+    hasSub: true,
     subs: [
       {
         id: 31,
@@ -62,7 +62,7 @@ const menu = [
     label: "Quản lý tài chính",
     icon: <Wallet size={14} />,
     path: pathnames.users.layout + pathnames.users.manageBalance,
-    hasSubs: true,
+    hasSub: true,
     subs: [
       {
         id: 41,

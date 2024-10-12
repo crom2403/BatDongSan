@@ -15,7 +15,7 @@ const UserBox = () => {
         />
         <div className="absolute bg-white rounded-full bottom-1 right-1">
           <Image
-            src="/svg/badge-stock/dinamond.svg"
+            src={me.rPricing?.imageUrl}
             className="size-6 object-cover border-2 border-slate-200 p-[2px] rounded-full"
           />
         </div>
@@ -31,9 +31,13 @@ const UserBox = () => {
               <>
                 <p>
                   <span>Hạng tài khoản: </span>
-                  <span>Kim cương</span>
+                  <span className="text-main">{me.rPricing?.name}</span>
                 </p>
-                <p>Cần tích lũy thêm 1000 điểm để lên level tiếp theo</p>
+                <p>
+                  Cần tích lũy thêm{" "}
+                  <span className="text-main">{me.rPricing?.requiredScoreNextLevel}</span> điểm để
+                  lên level tiếp theo
+                </p>
               </>
             }
           />

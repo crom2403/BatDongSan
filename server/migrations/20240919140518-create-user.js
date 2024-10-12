@@ -54,6 +54,7 @@ module.exports = {
           model: "Pricings",
           key: "id",
         },
+        defaultValue: 1,
       },
       createdAt: {
         allowNull: false,

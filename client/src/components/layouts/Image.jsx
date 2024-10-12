@@ -9,6 +9,6 @@ const Image = ({ src, fallbackSrc, alt = "ALT", ...props }) => {
 export default Image
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  fallbackSrc: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  fallbackSrc: PropTypes.string,
+  alt: PropTypes.string,
 }

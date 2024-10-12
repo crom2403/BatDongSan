@@ -1,10 +1,10 @@
-import { UserBox } from "."
+import { NavMenu, UserBox } from "."
 
 const UserSitebar = () => {
   return (
     <div>
       <UserBox />
-      UserSitebar
+      <NavMenu />
     </div>
   )
 }

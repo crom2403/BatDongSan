@@ -19,8 +19,8 @@ module.exports = {
       isDisplayImmedialy: {
         type: Sequelize.BOOLEAN,
       },
-      isShowDescription: {
-        type: Sequelize.BOOLEAN,
+      levelShowDescription: {
+        type: Sequelize.FLOAT,
       },
       priority: {
         type: Sequelize.INTEGER,
@@ -28,7 +28,7 @@ module.exports = {
       requireScore: {
         type: Sequelize.INTEGER,
       },
-      requireScoreNextLevel: {
+      requiredScoreNextLevel: {
         type: Sequelize.INTEGER,
       },
       price: {

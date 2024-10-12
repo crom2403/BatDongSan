@@ -9,6 +9,9 @@ module.exports = {
       attributes: {
         exclude: ["password", "resetPwdExpiry", "resetPwdToken"], // các trường không trả vể
       },
+      include: [
+        { model: db.Pricing, as: "rPricing", attributes: { exclude: ["createdAt", "updatedAt"] } },
+      ],
     })
 
     return res.json({
