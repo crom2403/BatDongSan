@@ -32,4 +32,5 @@ export default {
   },
   // eslint-disable-next-line no-undef
   plugins: [require("tailwindcss-animate")],
+  mode: "jit", // Cho phép dùng calc
 }

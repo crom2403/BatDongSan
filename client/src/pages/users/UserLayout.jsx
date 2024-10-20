@@ -14,11 +14,12 @@ const UserLayout = () => {
   return (
     <div>
       <Header />
-      <div className="flex">
+      {/* Để dùng được calc thì thêm mode : 'fit' vào file tailwind.config */}
+      <div className="flex border h-[calc(100vh-96px)] border-red-500">
         <div className="w-[256px] flex-none">
           <UserSitebar />
         </div>
-        <div className="flex-auto">
+        <div className="flex-auto py-6 bg-slate-100">
           <Outlet />
         </div>
       </div>
